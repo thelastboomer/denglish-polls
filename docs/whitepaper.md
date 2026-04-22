@@ -1,502 +1,434 @@
-# Denglish Preference Project
-## Whitepaper v0.1
+# Denglish Polls Whitepaper
 
-**Working title:** German, English, or Denglish — what would you actually say?
+Version: 0.2  
+Status: Draft  
+Project: Denglish Polls  
+Repository model: phrase-based public archive
 
-**Status:** Initial concept draft for the first public GitHub commit  
-**Author:** Matthias Ludwig  
-**License suggestion:** MIT for code / CC BY 4.0 for content
+## 1. Purpose
 
----
+This project is a public archive and social-media experiment built around one recurring question:
 
-## 1. Executive Summary
+**Which would you actually say?**
 
-The **Denglish Preference Project** is a public language experiment built around a simple recurring question:
+For each entry, the same meaning is presented in three variants:
 
-> **Which would you actually say?**
+- **denglish** — a mixed German-English form
+- **en** — a natural English sentence
+- **de** — a natural German sentence
 
-For each phrase or sentence, users are presented with three alternatives:
+The project collects phrase examples, poll results, media assets, and public discussion around real language preference.
 
-- **Denglish** — a hybrid form mixing German and English in one expression or sentence
-- **EN** — a natural full English version
-- **DE** — a natural full German version
+The main distribution format is:
 
-The goal is not to declare one form objectively correct, but to document **real preference, real usage, and real language drift** in public digital culture.
+- an **X poll**
+- a **TikTok post** introducing the phrase
+- a **follow-up TikTok post** showing the result after the poll closes
 
-The project combines:
-
-- short-form social content on **TikTok**
-- public voting on **X polls**
-- a transparent, growing **GitHub archive** of phrases and results
-
-Over time, the project can become a structured public dataset showing where modern German speakers prefer:
-
-- pure German,
-- pure English,
-- or hybrid Denglish.
+The long-term archive lives publicly on GitHub.
 
 ---
 
-## 2. Core Idea
+## 2. Core idea
 
-Modern German speech, especially online, in offices, in tech, in media, and among younger speakers, often contains English elements. Some of these expressions are obvious borrowings, some are literal translations from English, and some are full mixed sentences.
+A poll only makes sense if the three options are genuinely different.
 
-Examples:
+Example:
 
-- *Ich habe das gedownloadet.*
-- *Das macht für mich keinen Sinn.*
-- *Wir sollten das nochmal challengen.*
-- *Das ist weird.*
+- **denglish:** Ich habe das gedownloadet.
+- **en:** I downloaded it.
+- **de:** Ich habe das heruntergeladen.
 
-At the same time, full English alternatives and full German alternatives usually also exist:
+Poll question:
 
-- *I downloaded it.*
-- *Ich habe das heruntergeladen.*
+**Which would you actually say?**
 
-This creates an interesting three-way comparison:
+Poll options:
 
-1. **Hybrid expression**
-2. **Natural English expression**
-3. **Natural German expression**
+- denglish
+- en
+- de
 
-The project turns that comparison into a repeatable public format.
+This format treats Denglish as a category distinct from both full English and full German.
 
 ---
 
-## 3. Definition of Denglish
+## 3. Working definition of Denglish
 
 For this project, **Denglish is defined narrowly**.
 
-### 3.1 Operational Definition
+### Denglish
+A sentence or expression that mixes German and English within the phrase itself, or uses a clearly English-influenced construction inside German.
 
-A phrase counts as **Denglish** if it is **not fully German and not fully English**, but instead contains one or more of the following:
+Examples:
 
-- English vocabulary embedded in German sentence structure
-- Germanized English verbs or nouns
-- English-influenced literal translations that feel imported from English usage
-- mixed syntax or wording that reflects hybrid speech habits
+- Ich habe das gedownloadet.
+- Wir haben morgen ein Meeting.
+- Das macht für mich keinen Sinn.
 
-### 3.2 Examples That Qualify as Denglish
+### English
+A natural sentence in English.
 
-- *Ich habe das gedownloadet.*
-- *Das macht Sinn.*
-- *Wir müssen das nochmal challengen.*
-- *Ich bin heute im Homeoffice.*
-- *Das ist awkward.*
+Example:
 
-### 3.3 What Does **Not** Count as Denglish in This Project
+- I downloaded it.
 
-The following do **not** count as Denglish for classification purposes:
+### German
+A natural sentence in standard German.
+
+Example:
+
+- Ich habe das heruntergeladen.
+
+### Not included as Denglish
+This project does **not** treat the following as Denglish for classification purposes:
 
 - one full sentence in German followed by one full sentence in English
-- a complete switch from one language to the other without internal mixing
-- direct translation exercises without real-world usage value
+- general bilingual conversation
+- alternating complete sentences between languages
 
-That broader phenomenon is better described as **code-switching**, not Denglish.
+That phenomenon is better described as **code-switching**.
 
-### 3.4 Why This Narrow Definition Matters
-
-The project only works as a meaningful three-option poll if:
-
-- **Denglish** is a distinct third category,
-- separate from **EN**,
-- and separate from **DE**.
-
-If full English or full German sentences were also labeled “Denglish,” the comparison would collapse.
+This distinction is important because the poll format requires three parallel sentence categories:
+**denglish vs en vs de**.
 
 ---
 
-## 4. Poll Format
+## 4. Why this project may work
 
-Each phrase entry is built around one public question:
+This format has several strengths:
 
-> **Which would you actually say?**
+- it is easy to understand
+- it invites participation
+- it is repeatable
+- it works well for short-form social content
+- it produces public data over time
+- it can grow into a searchable phrase archive
 
-### 4.1 Standard Poll Template
+It combines entertainment, language observation, and lightweight public documentation.
+
+---
+
+## 5. Content workflow
+
+Each phrase can generate a small content cycle.
+
+### Step 1 — Select phrase
+Choose a phrase with a clear three-way contrast:
+
+- denglish
+- en
+- de
+
+### Step 2 — Publish poll on X
+Create a poll with the question:
+
+**Which would you actually say?**
+
+### Step 3 — Publish TikTok introduction
+Publish a TikTok that introduces the phrase. This may include:
+
+- direct on-screen text
+- narration
+- text-to-speech
+- duet or reaction format
+- commentary on why the phrase is Denglish
+
+### Step 4 — Wait for poll to close
+A 24-hour poll is a good default.
+
+### Step 5 — Publish TikTok result post
+Create a second TikTok showing:
+
+- the phrase again
+- the poll result
+- a short interpretation
+
+### Step 6 — Archive on GitHub
+Store the phrase, media, and results in the public repository.
+
+---
+
+## 6. GitHub repository model
+
+The repository should use **one folder per phrase**.
+
+This is the recommended long-term format because each phrase may later contain:
+
+- text
+- metadata
+- audio files
+- screenshots
+- poll graphics
+- links to public posts
+
+### Recommended structure
 
 ```text
-Denglish
-Ich habe das gedownloadet.
-
-EN
-I downloaded it.
-
-DE
-Ich habe das heruntergeladen.
-
-Which would you actually say?
-- Denglish
-- EN
-- DE
+README.md
+LICENSE
+docs/
+  whitepaper.md
+phrases/
+  index.md
+  0001-ich-habe-das-gedownloadet/
+    README.md
+    meta.yaml
+    audio/
+      denglish.mp3
+      en.mp3
+      de.mp3
+    images/
+      poll-result.png
+      x-poll-screenshot.png
+  0002-das-macht-keinen-sinn/
+    README.md
+    meta.yaml
 ```
 
-### 4.2 Why This Prompt Works
+---
 
-The wording avoids abstract debates about correctness and instead asks for:
+## 7. Why one folder per phrase is the right model
 
-- actual usage,
-- natural preference,
-- spoken instinct,
-- identity and style.
+A separate folder for each phrase makes the project scalable.
 
-This makes the result more interesting than a school-style “Which is correct?” poll.
+### Benefits
+
+- each phrase becomes a self-contained public record
+- media assets stay organized
+- future automation becomes easier
+- contributors can add phrases cleanly
+- GitHub browsing stays readable
+- the project can later grow into a website or dataset
+
+This structure supports both a simple start and later expansion.
 
 ---
 
-## 5. Platform Strategy
+## 8. Phrase folder specification
 
-### 5.1 X
+Each phrase folder should have at least a human-readable file and may later include machine-readable metadata and media.
 
-X is used for:
-
-- public polls
-- final vote counts
-- audience interaction
-- quote replies and discussion
-
-### 5.2 TikTok
-
-TikTok is used for:
-
-- source examples
-- reaction videos
-- duets where allowed
-- short commentary before the vote
-- follow-up videos showing the result after the poll closes
-
-### 5.3 GitHub
-
-GitHub is used for:
-
-- public phrase archive
-- transparent methodology
-- result history
-- version control
-- possible future dataset exports and analysis
-
-GitHub is the permanent memory layer of the project.
-
----
-
-## 6. Content Workflow
-
-### 6.1 Step 1 — Detect a Candidate Phrase
-
-Find a phrase that clearly fits one of these patterns:
-
-- mixed German-English sentence
-- German phrase strongly influenced by English
-- widely used hybrid expression in digital culture
-- controversial or funny “Denglish” construction
-
-### 6.2 Step 2 — Normalize the Three Variants
-
-Create three versions:
-
-- **Denglish** version
-- **EN** version
-- **DE** version
-
-Important rule: all three should express **the same intended meaning** as closely as possible.
-
-### 6.3 Step 3 — Publish Social Post
-
-Create:
-
-- one X poll
-- optionally one TikTok introducing the phrase
-
-### 6.4 Step 4 — Wait for Poll Close
-
-Recommended initial duration:
-
-- **24 hours**
-
-### 6.5 Step 5 — Publish Result Video
-
-Create a short TikTok or X follow-up showing:
-
-- the phrase
-- the three options
-- the winner
-- optional commentary
-
-### 6.6 Step 6 — Archive on GitHub
-
-Add the entry to the public archive with:
-
-- phrase ID
-- date
-- wording
-- classification notes
-- poll result
-- platform links if still available
-
----
-
-## 7. Data Model
-
-Each phrase should have a stable public record.
-
-### 7.1 Suggested Fields
-
-```yaml
-id: 0001
-slug: ich-habe-das-gedownloadet
-status: published
-category: lexical-mix
-question: Which would you actually say?
-denglish: Ich habe das gedownloadet.
-en: I downloaded it.
-de: Ich habe das heruntergeladen.
-notes: Hybrid German sentence with English loan verb adapted into German morphology.
-source_context: common online/offline usage
-poll_platform: x
-poll_opened: 2026-04-22
-poll_duration_hours: 24
-result_denglish_percent: null
-result_en_percent: null
-result_de_percent: null
-winner: null
-```
-
-### 7.2 Possible Classification Types
-
-Each phrase can optionally be tagged with one or more categories:
-
-- `lexical-mix`
-- `literal-translation`
-- `office-language`
-- `tech-language`
-- `internet-slang`
-- `pseudo-anglicism`
-- `morphological-germanization`
-- `syntax-influence`
-- `youth-speech`
-- `media-language`
-
----
-
-## 8. GitHub Repository Structure
-
-Suggested initial repository structure:
+### Minimum version
 
 ```text
-/
-├─ README.md
-├─ LICENSE
-├─ whitepaper.md
-├─ data/
-│  ├─ phrases/
-│  │  ├─ 0001-ich-habe-das-gedownloadet.md
-│  │  ├─ 0002-das-macht-sinn.md
-│  │  └─ ...
-│  └─ phrases.yaml
-├─ docs/
-│  ├─ methodology.md
-│  ├─ classification.md
-│  └─ faq.md
-└─ media/
-   └─ thumbnails/
+phrases/
+  0001-ich-habe-das-gedownloadet/
+    README.md
 ```
 
-### 8.1 Minimal First Commit
+### Recommended version
 
-For the first commit, the following is enough:
-
-- `README.md`
-- `whitepaper.md`
-- `data/phrases/0001-ich-habe-das-gedownloadet.md`
+```text
+phrases/
+  0001-ich-habe-das-gedownloadet/
+    README.md
+    meta.yaml
+    audio/
+      denglish.mp3
+      en.mp3
+      de.mp3
+    images/
+      poll-result.png
+      x-poll-screenshot.png
+```
 
 ---
 
-## 9. Example Entry
+## 9. Phrase README template
+
+Each phrase should have a `README.md` that can be read directly on GitHub.
+
+Suggested structure:
 
 ```md
 # 0001 — Ich habe das gedownloadet.
 
-**Status:** planned  
-**Category:** lexical-mix, morphological-germanization  
-**Question:** Which would you actually say?
+## Phrase variants
 
-## Variants
+- **denglish:** Ich habe das gedownloadet.
+- **en:** I downloaded it.
+- **de:** Ich habe das heruntergeladen.
 
-- **Denglish:** Ich habe das gedownloadet.
-- **EN:** I downloaded it.
-- **DE:** Ich habe das heruntergeladen.
+## Poll question
+
+Which would you actually say?
+
+## Poll options
+
+- denglish
+- en
+- de
 
 ## Notes
 
-This is a classic Denglish pattern: an English verb root is inserted into a German sentence and adapted to German grammar.
+A typical example of Denglish using an English root adapted into German usage.
 
-## Result
+## Links
 
-- Denglish: pending
-- EN: pending
-- DE: pending
-
-## Commentary
-
-A good starter phrase because the three options are cleanly separated and easy to understand.
+- X poll:
+- TikTok intro:
+- TikTok result:
 ```
 
 ---
 
-## 10. Methodological Principles
+## 10. Metadata template
 
-### 10.1 Descriptive, Not Prescriptive
+Each phrase may also have a `meta.yaml` file for structured processing.
 
-The project documents what people actually prefer to say.
-It does not act as a language academy.
+Example:
 
-### 10.2 Transparent Classification
+```yaml
+id: 1
+slug: ich-habe-das-gedownloadet
+title: Ich habe das gedownloadet.
+denglish: Ich habe das gedownloadet.
+en: I downloaded it.
+de: Ich habe das heruntergeladen.
+question: Which would you actually say?
+options:
+  - denglish
+  - en
+  - de
+status: published
+tags:
+  - verb
+  - technology
+  - anglicism
+created: 2026-04-22
+x_poll_url: ""
+tiktok_intro_url: ""
+tiktok_result_url: ""
+```
 
-Every phrase should be explainable:
+This makes it easier to build:
 
-- Why is it Denglish?
-- Why is the DE version considered natural German?
-- Why is the EN version considered natural English?
-
-### 10.3 Same Meaning Across Versions
-
-The three alternatives must be semantically as close as possible.
-
-### 10.4 Public Traceability
-
-Whenever possible, archive:
-
-- poll date
-- platform used
-- result snapshot
-- notes on source context
-
-### 10.5 Real-World Relevance
-
-Only include phrases that people plausibly say, write, or encounter in real life.
-
----
-
-## 11. Why This Could Become Interesting
-
-Over time, the archive may reveal patterns such as:
-
-- which domains generate the most Denglish
-- whether tech phrases favor Denglish more strongly than daily-life phrases
-- whether some literal translations are accepted more than others
-- whether users prefer pure German in writing but Denglish in speech
-- how online language habits drift over time
-
-The project can evolve from entertainment into a small public linguistic dataset.
+- indexes
+- statistics
+- exports
+- search tools
+- websites
 
 ---
 
-## 12. Risks and Weaknesses
+## 11. Naming convention
 
-### 12.1 Informal Audience Bias
+Each phrase folder should use:
 
-Polls on X and TikTok do not produce representative scientific samples.
+**numeric ID + slug**
 
-### 12.2 Ambiguity of “Natural” German
+Examples:
 
-Some phrases have several acceptable German equivalents.
+- `0001-ich-habe-das-gedownloadet`
+- `0002-das-macht-keinen-sinn`
+- `0003-wir-haben-morgen-ein-meeting`
 
-### 12.3 Audience Irony
+This gives the project:
 
-Users may vote for the funniest option rather than the one they truly use.
-
-### 12.4 Platform Dependency
-
-Visibility, engagement, and poll participation depend on platform algorithms.
-
-### 12.5 Borderline Cases
-
-Some phrases may sit between borrowing, Anglicism, Denglish, and ordinary modern German.
-
-These limitations do not invalidate the project, but they should remain visible.
+- stable ordering
+- readable names
+- simple referencing
+- room for growth
 
 ---
 
-## 13. Future Expansion
+## 12. Central index
 
-Potential later additions:
+Even with separate phrase folders, the repository should also maintain a central index.
 
-- searchable website or GitHub Pages frontend
-- CSV/JSON export of all phrases
-- tag-based browsing
-- “most voted Denglish phrases” page
-- time-series tracking
-- German vs English speaking audience splits
-- comments archive
-- YouTube Shorts adaptation
-- public contribution guidelines
-- crowdsourced phrase submission form
-
----
-
-## 14. Suggested Positioning
-
-### 14.1 One-Line Version
-
-**A public experiment tracking whether people would actually say it in Denglish, English, or German.**
-
-### 14.2 Slightly Longer Version
-
-**The Denglish Preference Project is a public archive of hybrid German-English phrases, paired with natural English and natural German alternatives, and voted on by real users.**
-
-### 14.3 Creator Voice
-
-Tone should be:
-
-- curious
-- sharp
-- slightly humorous
-- not academic in style
-- but methodical in structure
-
----
-
-## 15. Recommended First Phrase Set
-
-A possible first batch:
-
-1. *Ich habe das gedownloadet.*
-2. *Das macht Sinn.*
-3. *Ich bin im Homeoffice.*
-4. *Wir müssen das nochmal challengen.*
-5. *Das ist awkward.*
-6. *Kannst du mir ein Update geben?*
-7. *Wir haben ein Meeting.*
-8. *Das ist weird.*
-9. *Ich habe heute einen Call.*
-10. *Lass uns das final besprechen.*
-
-These should later be reviewed one by one to ensure the DE and EN alternatives are both natural and fair.
-
----
-
-## 16. Conclusion
-
-This project is simple, repeatable, public, and expandable.
-
-Its strength lies in the clean recurring question:
-
-> **Which would you actually say?**
-
-By defining Denglish narrowly and archiving every phrase transparently, the project can grow from a social-media format into a living public record of bilingual language preference.
-
----
-
-## 17. First Commit Note
-
-Suggested first commit message:
+Example:
 
 ```text
-Initial whitepaper for the Denglish Preference Project
+phrases/index.md
 ```
 
-Suggested repository description:
+This file can list all phrases in a simple table.
+
+Example:
+
+```md
+# Phrase Index
+
+| ID | Slug | Denglish phrase | Status |
+|----|------|------------------|--------|
+| 0001 | ich-habe-das-gedownloadet | Ich habe das gedownloadet. | published |
+| 0002 | das-macht-keinen-sinn | Das macht keinen Sinn. | draft |
+```
+
+This helps users browse the archive quickly.
+
+---
+
+## 13. License approach
+
+Because this repository is primarily a public content and documentation project, a **Creative Commons Attribution 4.0 International (CC BY 4.0)** license is a strong fit.
+
+This allows public reuse while keeping attribution.
+
+Suggested repository note:
+
+> Unless otherwise noted, the content in this repository is licensed under CC BY 4.0.
+
+---
+
+## 14. Editorial principles
+
+To keep the project useful and consistent, each phrase should aim for the following:
+
+- the three versions should express the same meaning as closely as possible
+- the German version should be natural German, not artificial anti-English German
+- the English version should be natural English
+- the Denglish version should reflect real usage, not a parody unless explicitly marked as parody
+- the phrase should be short enough for polling and social-media presentation
+- the distinction between categories should remain clear
+
+---
+
+## 15. Scope for future expansion
+
+The project can later expand in several directions:
+
+- pronunciation audio for each variant
+- charts of poll results
+- tags by topic, grammar, or setting
+- office/business Denglish
+- tech/internet Denglish
+- regional differences
+- time trends across phrases
+- a public website generated from the repository
+- multilingual commentary or subtitles
+
+The phrase-folder model supports all of these.
+
+---
+
+## 16. Suggested first repository setup
+
+A practical initial setup is:
 
 ```text
-Public archive of Denglish vs English vs German phrase preferences.
+README.md
+LICENSE
+docs/
+  whitepaper.md
+phrases/
+  index.md
+  0001-ich-habe-das-gedownloadet/
+    README.md
+    meta.yaml
 ```
 
+This is enough to launch the project while leaving room for audio and image assets later.
+
+---
+
+## 17. Conclusion
+
+The project works best when **Denglish is treated as a real third category**, distinct from full English and full German.
+
+The phrase-based folder structure is the right GitHub model because it allows each example to grow into a complete public record with text, metadata, media, and poll results.
+
+The guiding public question remains simple and strong:
+
+**Which would you actually say?**
