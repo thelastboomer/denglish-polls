@@ -1,0 +1,12 @@
+entry: gedownloadet
+examples:
+  - id: ex1
+    denglish: Ich habe das gedownloadet.
+    en: I downloaded it.
+    de: Ich habe das heruntergeladen.
+    notes: Basic past-tense example.
+  - id: ex2
+    denglish: Wir haben das gestern gedownloadet.
+    en: We downloaded it yesterday.
+    de: Wir haben das gestern heruntergeladen.
+    notes: Same entry in a plural sentence.
