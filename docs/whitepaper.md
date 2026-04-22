@@ -1,9 +1,9 @@
 # Denglish Polls Whitepaper
 
-Version: 0.2  
+Version: 0.3  
 Status: Draft  
 Project: Denglish Polls  
-Repository model: phrase-based public archive
+Repository model: entry-based public archive
 
 ## 1. Purpose
 
@@ -11,7 +11,7 @@ This project is a public archive and social-media experiment built around one re
 
 **Which would you actually say?**
 
-For each entry, the same meaning is presented in three variants:
+For each poll, the same meaning is presented in three variants:
 
 - **denglish** — a mixed German-English form
 - **en** — a natural English sentence
@@ -111,21 +111,26 @@ It combines entertainment, language observation, and lightweight public document
 
 ## 5. Content workflow
 
-Each phrase can generate a small content cycle.
+Each entry can generate one or more poll cycles.
 
-### Step 1 — Select phrase
-Choose a phrase with a clear three-way contrast:
+### Step 1 — Select entry
+Choose a Denglish entry with a clear three-way contrast.
 
-- denglish
-- en
-- de
+### Step 2 — Select sentence instance
+Choose a specific example sentence for that entry.
 
-### Step 2 — Publish poll on X
+Example entry:
+- `gedownloadet`
+
+Example sentence instance:
+- Ich habe das gedownloadet.
+
+### Step 3 — Publish poll on X
 Create a poll with the question:
 
 **Which would you actually say?**
 
-### Step 3 — Publish TikTok introduction
+### Step 4 — Publish TikTok introduction
 Publish a TikTok that introduces the phrase. This may include:
 
 - direct on-screen text
@@ -134,70 +139,127 @@ Publish a TikTok that introduces the phrase. This may include:
 - duet or reaction format
 - commentary on why the phrase is Denglish
 
-### Step 4 — Wait for poll to close
+### Step 5 — Wait for poll to close
 A 24-hour poll is a good default.
 
-### Step 5 — Publish TikTok result post
+### Step 6 — Publish TikTok result post
 Create a second TikTok showing:
 
 - the phrase again
 - the poll result
 - a short interpretation
 
-### Step 6 — Archive on GitHub
-Store the phrase, media, and results in the public repository.
+### Step 7 — Archive on GitHub
+Store the entry, sentence instance, media, and results in the public repository.
 
 ---
 
 ## 6. GitHub repository model
 
-The repository should use **one folder per phrase**.
+The repository should use **one folder per Denglish entry**, not one folder per full sentence.
 
-This is the recommended long-term format because each phrase may later contain:
+This is the recommended long-term format because one Denglish phenomenon often appears in multiple sentence variants.
 
-- text
-- metadata
-- audio files
-- screenshots
-- poll graphics
-- links to public posts
+### Good example
 
-### Recommended structure
+Use:
+
+- `0001-gedownloadet`
+
+instead of:
+
+- `0001-ich-habe-das-gedownloadet`
+
+Why this is better:
+
+- it avoids duplicate folders for near-identical sentence variants
+- it groups related examples under one stable concept
+- it makes the archive cleaner
+- it allows multiple polls and media files for the same Denglish item
+
+For example, these can all belong under the same entry:
+
+- Ich habe das gedownloadet.
+- Wir haben das gestern gedownloadet.
+- Hast du das schon gedownloadet?
+
+All of them represent the same core Denglish item:
+**gedownloadet**
+
+---
+
+## 7. Entry-based structure
+
+The repository should therefore distinguish between two levels:
+
+### 1. Entry
+The core Denglish unit or phenomenon.
+
+Examples:
+
+- `gedownloadet`
+- `meeting`
+- `sinn-machen`
+- `updaten`
+
+### 2. Sentence instance
+A specific sentence used in a poll or example.
+
+Examples:
+
+- Ich habe das gedownloadet.
+- Wir haben morgen ein Meeting.
+- Das macht für mich keinen Sinn.
+
+This distinction is important. The folder should represent the **entry**, while the files inside it can store one or more sentence instances.
+
+---
+
+## 8. Recommended structure
 
 ```text
 README.md
 LICENSE
 docs/
   whitepaper.md
-phrases/
+entries/
   index.md
-  0001-ich-habe-das-gedownloadet/
+  0001-gedownloadet/
     README.md
     meta.yaml
-    audio/
-      denglish.mp3
-      en.mp3
-      de.mp3
-    images/
-      poll-result.png
-      x-poll-screenshot.png
-  0002-das-macht-keinen-sinn/
+    examples.yaml
+    polls/
+      2026-04-22-01/
+        poll.md
+        result.yaml
+        images/
+          poll-result.png
+          x-poll-screenshot.png
+        audio/
+          denglish.mp3
+          en.mp3
+          de.mp3
+  0002-sinn-machen/
     README.md
     meta.yaml
+    examples.yaml
 ```
+
+This model is more scalable than one folder per sentence.
 
 ---
 
-## 7. Why one folder per phrase is the right model
+## 9. Why one folder per entry is the right model
 
-A separate folder for each phrase makes the project scalable.
+A separate folder for each entry makes the project scalable.
 
 ### Benefits
 
-- each phrase becomes a self-contained public record
+- one concept can contain many sentence variants
+- duplicate sentence folders are avoided
 - media assets stay organized
 - future automation becomes easier
-- contributors can add phrases cleanly
+- contributors can add examples cleanly
 - GitHub browsing stays readable
 - the project can later grow into a website or dataset
 
@@ -205,44 +267,145 @@ This structure supports both a simple start and later expansion.
 
 ---
 
-## 8. Phrase folder specification
+## 10. Entry folder specification
 
-Each phrase folder should have at least a human-readable file and may later include machine-readable metadata and media.
+Each entry folder should have at least a human-readable file and may later include machine-readable metadata, examples, and poll artifacts.
 
 ### Minimum version
 
 ```text
-phrases/
-  0001-ich-habe-das-gedownloadet/
+entries/
+  0001-gedownloadet/
     README.md
 ```
 
 ### Recommended version
 
 ```text
-phrases/
-  0001-ich-habe-das-gedownloadet/
+entries/
+  0001-gedownloadet/
     README.md
     meta.yaml
-    audio/
-      denglish.mp3
-      en.mp3
-      de.mp3
-    images/
-      poll-result.png
-      x-poll-screenshot.png
+    examples.yaml
+    polls/
+      2026-04-22-01/
+        poll.md
+        result.yaml
+        audio/
+          denglish.mp3
+          en.mp3
+          de.mp3
+        images/
+          poll-result.png
+          x-poll-screenshot.png
 ```
 
 ---
 
-## 9. Phrase README template
+## 11. Entry README template
 
-Each phrase should have a `README.md` that can be read directly on GitHub.
+Each entry should have a `README.md` that can be read directly on GitHub.
 
 Suggested structure:
 
 ```md
-# 0001 — Ich habe das gedownloadet.
+# 0001 — gedownloadet
+
+## Entry
+
+Core Denglish item: **gedownloadet**
+
+## Description
+
+English verb root adapted into German usage.
+
+## Example sentences
+
+- Ich habe das gedownloadet.
+- Wir haben das gestern gedownloadet.
+- Hast du das schon gedownloadet?
+
+## Related German alternatives
+
+- heruntergeladen
+- runtergeladen
+```
+
+---
+
+## 12. Metadata template
+
+Each entry may also have a `meta.yaml` file for structured processing.
+
+Example:
+
+```yaml
+id: 1
+slug: gedownloadet
+title: gedownloadet
+category: verb
+type: borrowed-verb
+status: published
+tags:
+  - technology
+  - anglicism
+created: 2026-04-22
+```
+
+This makes it easier to build:
+
+- indexes
+- statistics
+- exports
+- search tools
+- websites
+
+---
+
+## 13. Examples template
+
+Each entry may have an `examples.yaml` file containing sentence variants.
+
+Example:
+
+```yaml
+entry: gedownloadet
+examples:
+  - id: ex1
+    denglish: Ich habe das gedownloadet.
+    en: I downloaded it.
+    de: Ich habe das heruntergeladen.
+    notes: Basic past-tense example.
+  - id: ex2
+    denglish: Wir haben das gestern gedownloadet.
+    en: We downloaded it yesterday.
+    de: Wir haben das gestern heruntergeladen.
+    notes: Same entry in a plural sentence.
+```
+
+This allows one entry to support multiple poll-ready examples.
+
+---
+
+## 14. Poll record template
+
+Each specific poll can be stored in its own subfolder.
+
+Example:
+
+```text
+entries/
+  0001-gedownloadet/
+    polls/
+      2026-04-22-01/
+        poll.md
+        result.yaml
+```
+
+Suggested `poll.md` structure:
+
+```md
+# Poll 2026-04-22-01
 
 ## Phrase variants
 
@@ -260,10 +423,6 @@ Which would you actually say?
 - en
 - de
 
-## Notes
-
-A typical example of Denglish using an English root adapted into German usage.
-
 ## Links
 
 - X poll:
@@ -271,58 +430,39 @@ A typical example of Denglish using an English root adapted into German usage.
 - TikTok result:
 ```
 
----
-
-## 10. Metadata template
-
-Each phrase may also have a `meta.yaml` file for structured processing.
-
-Example:
+Suggested `result.yaml` structure:
 
 ```yaml
-id: 1
-slug: ich-habe-das-gedownloadet
-title: Ich habe das gedownloadet.
-denglish: Ich habe das gedownloadet.
-en: I downloaded it.
-de: Ich habe das heruntergeladen.
-question: Which would you actually say?
-options:
-  - denglish
-  - en
-  - de
-status: published
-tags:
-  - verb
-  - technology
-  - anglicism
-created: 2026-04-22
+poll_id: 2026-04-22-01
+entry: gedownloadet
+example_id: ex1
+status: closed
+winner: ""
+votes:
+  denglish: 0
+  en: 0
+  de: 0
 x_poll_url: ""
 tiktok_intro_url: ""
 tiktok_result_url: ""
+closed_at: ""
 ```
-
-This makes it easier to build:
-
-- indexes
-- statistics
-- exports
-- search tools
-- websites
 
 ---
 
-## 11. Naming convention
+## 15. Naming convention
 
-Each phrase folder should use:
+Each entry folder should use:
 
-**numeric ID + slug**
+**numeric ID + short stable slug**
 
 Examples:
 
-- `0001-ich-habe-das-gedownloadet`
-- `0002-das-macht-keinen-sinn`
-- `0003-wir-haben-morgen-ein-meeting`
+- `0001-gedownloadet`
+- `0002-sinn-machen`
+- `0003-meeting`
+
+The folder name should represent the **smallest stable Denglish unit** that identifies the phenomenon, not necessarily the full sentence.
 
 This gives the project:
 
@@ -331,36 +471,51 @@ This gives the project:
 - simple referencing
 - room for growth
 
+### Rule of thumb
+
+Use the shortest stable slug that names the Denglish phenomenon.
+
+Good:
+
+- `0001-gedownloadet`
+- `0002-meeting`
+- `0003-sinn-machen`
+
+Less suitable:
+
+- `0001-ich-habe-das-gedownloadet`
+- `0002-wir-haben-das-gedownloadet`
+
 ---
 
-## 12. Central index
+## 16. Central index
 
-Even with separate phrase folders, the repository should also maintain a central index.
+Even with separate entry folders, the repository should also maintain a central index.
 
 Example:
 
 ```text
-phrases/index.md
+entries/index.md
 ```
 
-This file can list all phrases in a simple table.
+This file can list all entries in a simple table.
 
 Example:
 
 ```md
-# Phrase Index
+# Entry Index
 
-| ID | Slug | Denglish phrase | Status |
-|----|------|------------------|--------|
-| 0001 | ich-habe-das-gedownloadet | Ich habe das gedownloadet. | published |
-| 0002 | das-macht-keinen-sinn | Das macht keinen Sinn. | draft |
+| ID | Slug | Type | Status |
+|----|------|------|--------|
+| 0001 | gedownloadet | verb | published |
+| 0002 | sinn-machen | expression | draft |
 ```
 
 This helps users browse the archive quickly.
 
 ---
 
-## 13. License approach
+## 17. License approach
 
 Because this repository is primarily a public content and documentation project, a **Creative Commons Attribution 4.0 International (CC BY 4.0)** license is a strong fit.
 
@@ -372,20 +527,21 @@ Suggested repository note:
 
 ---
 
-## 14. Editorial principles
+## 18. Editorial principles
 
-To keep the project useful and consistent, each phrase should aim for the following:
+To keep the project useful and consistent, each poll should aim for the following:
 
 - the three versions should express the same meaning as closely as possible
 - the German version should be natural German, not artificial anti-English German
 - the English version should be natural English
 - the Denglish version should reflect real usage, not a parody unless explicitly marked as parody
-- the phrase should be short enough for polling and social-media presentation
+- the sentence should be short enough for polling and social-media presentation
 - the distinction between categories should remain clear
+- multiple sentence examples may belong to the same entry
 
 ---
 
-## 15. Scope for future expansion
+## 19. Scope for future expansion
 
 The project can later expand in several directions:
 
@@ -395,15 +551,15 @@ The project can later expand in several directions:
 - office/business Denglish
 - tech/internet Denglish
 - regional differences
-- time trends across phrases
+- time trends across entries
 - a public website generated from the repository
 - multilingual commentary or subtitles
 
-The phrase-folder model supports all of these.
+The entry-based folder model supports all of these.
 
 ---
 
-## 16. Suggested first repository setup
+## 20. Suggested first repository setup
 
 A practical initial setup is:
 
@@ -412,22 +568,23 @@ README.md
 LICENSE
 docs/
   whitepaper.md
-phrases/
+entries/
   index.md
-  0001-ich-habe-das-gedownloadet/
+  0001-gedownloadet/
     README.md
     meta.yaml
+    examples.yaml
 ```
 
 This is enough to launch the project while leaving room for audio and image assets later.
 
 ---
 
-## 17. Conclusion
+## 21. Conclusion
 
 The project works best when **Denglish is treated as a real third category**, distinct from full English and full German.
 
-The phrase-based folder structure is the right GitHub model because it allows each example to grow into a complete public record with text, metadata, media, and poll results.
+The GitHub structure should be **entry-based rather than sentence-based**. One folder should represent one stable Denglish phenomenon, while multiple sentence examples and poll records can live inside that folder.
 
 The guiding public question remains simple and strong:
 
