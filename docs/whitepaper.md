@@ -19,6 +19,8 @@ For each poll, the same meaning is presented in three variants:
 
 The project collects phrase examples, poll results, media assets, and public discussion around real language preference.
 
+The intended audience is people fluent in both German and English. The poll question only produces meaningful data from bilingual respondents, so the X account bio, the repository, and the per-poll framing make this audience explicit. The platform cannot enforce this, so non-bilingual votes are treated as interpretive noise rather than signal when reading results.
+
 The main distribution format is:
 
 - an **X poll**
@@ -538,6 +540,7 @@ To keep the project useful and consistent, each poll should aim for the followin
 - the sentence should be short enough for polling and social-media presentation
 - the distinction between categories should remain clear
 - multiple sentence examples may belong to the same entry
+- the polls assume a bilingual (German + English) audience; non-bilingual votes are noise and should be discounted when interpreting results
 
 ---
 
