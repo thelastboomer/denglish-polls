@@ -1,6 +1,6 @@
 # denglish-polls
 
-A public archive of Denglish vs English vs German phrase preferences.
+A public archive of Denglish vs English vs German phrase preferences. The intended audience is people fluent in both German and English.
 
 ## License
 

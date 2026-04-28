@@ -1,4 +1,4 @@
-# Poll 2026-04-23-01
+# Poll 2026-04-27-01
 
 ## Phrase variants
 
