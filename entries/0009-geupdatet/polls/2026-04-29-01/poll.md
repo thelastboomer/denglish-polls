@@ -1,10 +1,10 @@
-# Poll 2026-04-27-01
+# Poll 2026-04-29-01
 
 ## Phrase variants
 
-- **denglish:** Ich habe das gedownloadet.
-- **en:** I downloaded it.
-- **de:** Ich habe das heruntergeladen.
+- **denglish:** Ich habe die App gestern geupdatet.
+- **en:** I updated the app yesterday.
+- **de:** Ich habe die App gestern aktualisiert.
 
 ## Poll question
 

@@ -1,0 +1,7 @@
+entry: gemailt
+examples:
+  - id: ex1
+    denglish: Sie hat mir die Datei gemailt.
+    en: She emailed me the file.
+    de: Sie hat mir die Datei per E-Mail geschickt.
+    notes: ""

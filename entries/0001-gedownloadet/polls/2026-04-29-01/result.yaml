@@ -1,13 +1,13 @@
-poll_id: 2026-04-27-01
+poll_id: 2026-04-29-01
 entry: gedownloadet
 example_id: ex1
-status: open
+status: closed
 winner: ""
 votes:
   denglish: 0
   en: 0
   de: 0
-x_poll_url: https://x.com/i/status/2048755896994480344
+x_poll_url: https://x.com/i/status/2049428878783861028
 tiktok_intro_url: ""
 tiktok_result_url: ""
 closed_at: ""

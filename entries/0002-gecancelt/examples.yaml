@@ -1,0 +1,7 @@
+entry: gecancelt
+examples:
+  - id: ex1
+    denglish: Das Meeting wurde gecancelt.
+    en: The meeting was cancelled.
+    de: Das Treffen wurde abgesagt.
+    notes: ""

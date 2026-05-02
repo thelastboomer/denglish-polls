@@ -1,0 +1,7 @@
+entry: geliked
+examples:
+  - id: ex1
+    denglish: Sie hat meinen Beitrag geliked.
+    en: She liked my post.
+    de: Ihr hat mein Beitrag gefallen.
+    notes: ""

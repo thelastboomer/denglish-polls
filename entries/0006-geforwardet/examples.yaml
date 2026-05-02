@@ -1,0 +1,7 @@
+entry: geforwardet
+examples:
+  - id: ex1
+    denglish: Ich habe dir die E-Mail geforwardet.
+    en: I forwarded you the email.
+    de: Ich habe dir die E-Mail weitergeleitet.
+    notes: ""

@@ -1,0 +1,7 @@
+entry: gebookt
+examples:
+  - id: ex1
+    denglish: Wir haben den Flug nach Berlin gebookt.
+    en: We booked the flight to Berlin.
+    de: Wir haben den Flug nach Berlin gebucht.
+    notes: ""
