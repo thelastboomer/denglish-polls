@@ -4,8 +4,8 @@ example_id: ex1
 status: closed
 winner: ""
 votes:
-  denglish: 0
-  en: 0
+  denglish: 10
+  en: 2
   de: 0
 x_poll_url: https://x.com/i/status/2049428878783861028
 tiktok_intro_url: ""
